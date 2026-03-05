@@ -1,0 +1,134 @@
+body{
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 20% 50% 20%;
+	grid-template-rows: auto auto;
+	justify-content: center;
+	color: white;
+    background-color: rgb(36, 36, 36);
+	overflow: hidden;
+}
+
+#leftPanel{
+	grid-column: 1;
+	grid-row: 1;
+	width: 23vh;
+	border: 2px white solid;
+	margin: auto 0 auto auto;
+	height: 80%;
+	border-radius: 50px;
+}
+
+#leftInnerPanel{
+	padding: 50px 0 50px 0;
+	height: calc(100vh - 100px);
+	width: 100%;
+}
+
+#gameStateHeader{
+	grid-column: 2;
+	grid-row: 1;
+	text-align: center;
+}
+
+#rightPanel{
+	position: relative;
+	z-index: 1;
+	grid-column: 3;
+	grid-row: 1;
+	width: 30vh;
+	border: 2px white solid;
+	margin: auto auto auto 0;
+	max-height: 100vh;
+	height: 80%;
+	border-radius: 50px;
+}
+
+#rightInnerPanel{
+	padding: 50px 0 50px 0;
+	height: calc(100% - 100px);
+	width: 100%;
+}
+
+#chatDiv{
+	width: 100%;
+	height: 100%;
+}
+
+#chatBox{
+	font-size: medium;
+	color: white;
+	width: 100%;
+	
+	height: 85%;
+	background-color: rgb(80, 80, 80);
+	overflow-y: scroll;
+	resize: none;
+}
+
+#chatInput{
+	font-size: medium;
+	color: white;
+	width: 97%;
+	height: 5%;
+	background-color: rgb(80, 80, 80)
+}
+
+#chatHead{
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	text-align: center;
+}
+
+
+.btn{
+	width: fit-content;
+	font-size:medium;
+	height: 3vh;
+	background-color: rgb(80, 80, 80);
+	color: white;
+	border: 0;
+}
+
+.clicked, .clicked:hover{
+	background-color: rgb(48, 48, 48) !important;
+}
+
+.btn:hover{
+	background-color: rgb(63, 63, 63);
+}
+
+.btn:hover:active{
+	background-color: rgb(48, 48, 48);
+}
+
+#netBtns, #gameBtns, #gameInfo, #idField #details, #error, #interactBtns{
+	margin: auto;
+	margin-bottom: 5vh;
+	width: fit-content;
+}
+
+#details, #gameInfo, #idText, #playerJoined, #joinError{
+	text-align: center;
+}
+
+#canvas{
+	grid-column: 2;
+	grid-row: 1;
+	margin: auto;
+
+}
+
+#id, #codeIn{
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.hidden{
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	position: absolute;
+	pointer-events: none;
+}

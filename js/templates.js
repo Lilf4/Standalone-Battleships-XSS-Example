@@ -1,0 +1,35 @@
+const projectTemplate =
+	'<div class="prjctShrink">'
++		'<div class="clickable" id="project" onclick="location.href = \'{PRJCTLINK}\'" PRJCTID="{PRJCTID}">'
++		'<div id="projectInner">'
++			'<div id="titleDiv">'
++				'<p id="projectTitle"localize="PRJCTTITLTE"></p>'
++			'</div>'
++			'<div id="imgDiv" style="background: url({IMG}) no-repeat; background-position: center; background-size: 100%; background-color: RGBA(0,0,0,0.5);">'
++				'<div class="tagDiv" style="position: absolute; width: fit-content; height: fit-content; bottom: 0px; right: 3px;">'
++				'</div>'
++ 			'</div>'
++			'<div id="descDiv">'
++				'<p id="projectDesc"localize="PRJCTDESC"></p>'
++			'</div>'
++		'</div>'
++		'</div>'
++	'</div>'
+
+const tagImgTemplate =
+	'<div class="tooltip" style="width: fit-content; height: fit-content; float: left;">'
++		'<img src="@TAGLINK" style="width:25px;">'
++		'<span class="tooltiptext">@TAGNAME</span>'
++	'</div>';
+
+const langElement = 
+	'<!--Languages-->'
++	'<link rel="stylesheet" href="https://lilf4.github.io/Styles/Language.css" />'
++	'<div id="langDiv">'
++		'<hr/>'
++		'<ul id="langBar">'
++			'<li class="langList"><img id="DK-FLAG" class="langImg clickable" src="https://lilf4.github.io/Icons/DK-flag.png" onclick="changeLang(\'DK\')"></li>'
++			'<li class="langList"><img id="EN-FLAG" class="langImg clickable" src="https://lilf4.github.io/Icons/EN-flag.png" onclick="changeLang(\'EN\')"></li>'
++			'<li class="langList"><img id="NL-FLAG" class="langImg clickable hidden" src="https://lilf4.github.io/Icons/NL-flag.png" onclick="changeLang(\'NL\')"></li>'
++		'</ul>'
++	'</div>'

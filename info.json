@@ -1,0 +1,18 @@
+{
+	"GENERAL": {
+		"PRJCTTITLTE": "BattleShips",
+		"IMG": "/Images/battleships.png",
+		"PRJCTLINK": "/Projects/Games/Multiplayer/BattleShips",
+		"PRJCTID": "BTSH",
+		"TAGS": ["HTML", "CSS", "JS"]
+	},
+	"DK": {
+		"PRJCTDESC": "Et klassisk Battleships spil, lavet med mulighed for at spille peer to peer med andre."
+	},
+	"EN": {
+		"PRJCTDESC": "A classic Battleships game, made with the ability to play peer to peer with others."
+	},
+	"NL": {
+		"PRJCTDESC": "Test projecteren"
+	}
+}

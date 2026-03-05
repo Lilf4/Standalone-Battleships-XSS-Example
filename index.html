@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+	<link rel="icon" type="image/x-icon" href="icon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/peerjs@1.5.5/dist/peerjs.min.js"></script>
+	<script src="js/connLogic.js"></script>
+	<script src="js/chatControl.js" defer></script>
+	<script src="js/renderer.js" defer></script>
+	<script src="js/gameLogic.js" defer></script>
+	<script src="js/main.js" defer></script>
+	<script type="text/javascript" src="js/templates.js"></script>
+	<link rel="stylesheet" href="home.css"></link>
+	<link rel="stylesheet" href="general.css"></link>
+	<link rel="stylesheet" href="style.css">
+	<title localize="TITLE"></title>
+</head>
+<body onload="loadLangElement()">
+	<!--TODO: Figure out better setup that is independant on specific resolution-->
+	<div id="leftPanel">
+		<div id="leftInnerPanel">
+			<div id="netBtns">
+				<button id="joinBtn" onclick="join()" class="btn">Join</button>
+				<button id="hostBtn" onclick="host()" class="btn">Host</button>
+				<button id="discBtn" onclick="disc()" class="btn hidden">Disconnect</button>
+			</div>
+			<div id="idField">
+				<p id="playerJoined" class="hidden">Waiting for player..</p>
+				<p id="idText" class="hidden">fed28992-7706-4c4c-8dde-b21d7217e38d</p>
+			</div>
+			<div id="gameInfo">
+				<p>Username:</p>
+				<input id="UsernameInput" type="text" placeholder="Write Username" onkeyup="checkUsername()" value="">
+			</div>
+			<div id="gameBtns">
+				<button onclick="changeGrid('ocean')" id="oceanBtn" class="btn">Ocean Grid</button>
+				<button onclick="changeGrid('target')" id="targetBtn" class="btn">Target Grid</button>
+			</div>
+			<div id="interactBtns">
+				<button onclick="ready()" id="readyBtn" class="btn hidden">Ready</button>
+				<button onclick="rebtn()" id="rematchBtn" class="btn hidden">Rematch</button>
+			</div>
+			<div id="details">
+				<p>When setting up your ships:<br><br>use 'Left Click' to place ships<br><br>use 'R' to change the direction your ship will be placed<br><br>use 'Right Click' on a placed ship to remove it</p>
+			</div>
+		</div>
+	</div>
+	<h1 id="gameStateHeader">Current Action Goes Here</h1>
+	<canvas id="canvas" width="800px" height="800px"></canvas>
+	<div id="rightPanel">
+		<h2 id="chatHead">Chat/Log</h2>
+		<div id="rightInnerPanel">
+			<div id="chatDiv">
+				<div id="chatBox" contenteditable="false" readonly>
+				</div>
+				<br>
+				<p>Write message:</p>
+				<input id="chatInput">
+			</div>
+		</div>
+	</div>
+</body>
