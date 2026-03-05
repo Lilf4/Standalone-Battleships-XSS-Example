@@ -2,7 +2,7 @@
 
 const peer = new Peer();
 
-var gameName = "TicTacToe";
+var gameName = "Battleships";
 var maxConns = 1;
 var connections = [];
 var isHost = false;

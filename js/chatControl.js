@@ -8,14 +8,18 @@ $(input).keypress(function (e) {
 		//Send chat package
 		if ($(input).val() != "") {
 			addMessageToChat($(input).val(), 'You')
-			sendData({
-				type: 'chatMessage',
-				msg: $(input).val()
-			})
+			sendMessageToPeer($(input).val())
 			$(input.val(""))
 		}
 	}
 });
+
+function sendMessageToPeer(msg){
+    sendData({
+		type: 'chatMessage',
+		msg: msg
+	})
+}
 
 function addMessageToChat(msg, user, color) {
 	var date = new Date();
